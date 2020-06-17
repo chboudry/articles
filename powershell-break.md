@@ -44,9 +44,9 @@ https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/abo
 >**Short description**
 >
 >Describes a statement you can use to immediately exit foreach, for, while, do, switch, or trap statements.
+>
+>When `break` is used outside of a construct that directly supports it (`loops`, `switch`, `trap`), PowerShell looks up the call stack >for an enclosing construct. If it can't find an enclosing construct, the current runspace is quietly terminated.
+>
+>This means that functions and scripts that inadvertently use a break outside of an enclosing construct that supports it can >inadvertently terminate their callers.
 
-When `break` is used outside of a construct that directly supports it (`loops`, `switch`, `trap`), PowerShell looks up the call stack for an enclosing construct. If it can't find an enclosing construct, the current runspace is quietly terminated.
-
-This means that functions and scripts that inadvertently use a break outside of an enclosing construct that supports it can inadvertently terminate their callers.
-
-in our example using `break` inside a pipeline using a ForEach-Object script block, not only exits the pipeline, it also terminates the parent. In worst case it can also potentially terminates the entire runspace (but that would have been easier to troubleshoot :wink:).
+In our example using `break` inside a pipeline using a ForEach-Object script block, not only exits the pipeline, it also terminates the parent. In worst case it can also potentially terminates the entire runspace (but that would have been easier to troubleshoot :wink:).
