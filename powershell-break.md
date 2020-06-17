@@ -13,10 +13,10 @@ author: Charles Boudry
 I once reviewed a PowerShell code similar to this one :
 ```powershell
 $is = 0..4
-$js = 0..4
 foreach($i in $is)
 {
-	$js | foreach-object{
+	$js = 0..4
+	$js | %{
 		$j = $_
 		write-output "$i $j"
 		if ($j -eq 5){break;}
@@ -24,6 +24,22 @@ foreach($i in $is)
 }
 ```
 The usual expectation is the following : 
+0 0
+0 1
+0 2
+0 3
+1 0
+1 1
+1 2
+1 3
+2 0
+2 1
+2 2
+2 3
+3 0
+3 1
+3 2
+3 3
 
 ```powershell
 for ($i=0; $i -lt 10 ; $i++){
