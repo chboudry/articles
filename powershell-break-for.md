@@ -11,14 +11,6 @@ author: Charles Boudry
 # PowerShell - Break with nested loops
 
 ```powershell
-Get-Command -Name Clear-Host
-```
-```text
-CommandType Name Definition
-Function Clear-Host $spaceType = [System.Managem...
-```
-
-```powershell
 for ($i=1; $i -lt 10 ; $i++){
 	for ($j=1; $j -lt 10 ; $j++){
 		write-output "$i $j"
