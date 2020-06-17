@@ -1,5 +1,5 @@
 ---
-title: PowerShell - Break with nested loops 
+title: PowerShell - break with nested loops 
 image: image
 description: break has a very different comportment whether you are in a for each or in a for loop. Let's understand why.
 createddate: 01/06/2019
