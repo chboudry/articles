@@ -8,7 +8,7 @@ tag: PowerShell
 author: Charles Boudry
 ---
 
-# PowerShell - Break with pipeline
+# PowerShell - break with pipeline
 
 ```powershell
 for ($i=0; $i -lt 10 ; $i++){
