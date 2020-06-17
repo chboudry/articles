@@ -10,6 +10,7 @@ author: Charles Boudry
 
 # PowerShell - foreach-object and break
 
+## 
 I once reviewed a PowerShell code similar to this one :
 ```powershell
 $is = 0..3
@@ -23,7 +24,8 @@ foreach($i in $is)
 	}
 }
 ```
-The usual expectation is the following : 
+The usual expectation is the following :
+```text
 0 0
 0 1
 0 2
@@ -40,6 +42,14 @@ The usual expectation is the following :
 3 1
 3 2
 3 3
+```
+while the result was in fact : 
+```text
+0 0
+0 1
+0 2
+```
+
 
 ```powershell
 for ($i=0; $i -lt 10 ; $i++){
