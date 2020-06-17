@@ -49,4 +49,4 @@ When `break` is used outside of a construct that directly supports it (`loops`, 
 
 This means that functions and scripts that inadvertently use a break outside of an enclosing construct that supports it can inadvertently terminate their callers.
 
-in our example using `break` inside a pipeline using a ForEach-Object script block, not only exits the pipeline, it also terminates the parent. In worst case it can also potentially terminates the entire runspace (but that would have been easier to troubleshoot :)).
+in our example using `break` inside a pipeline using a ForEach-Object script block, not only exits the pipeline, it also terminates the parent. In worst case it can also potentially terminates the entire runspace (but that would have been easier to troubleshoot :wink:).
