@@ -11,7 +11,7 @@ author: Charles Boudry
 # PowerShell - ForEach-Object and break
 
 ## Context
-I once reviewed a PowerShell code similar to this one :
+I reviewed recently a PowerShell code similar to this one :
 ```powershell
 $is = 0..3
 foreach($i in $is)
