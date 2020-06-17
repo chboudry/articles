@@ -19,7 +19,7 @@ foreach($i in $is)
 	$js | %{
 		$j = $_
 		write-output "$i $j"
-		if ($j -eq 5){break;}
+		if ($j -eq 2){break;}
 	}
 }
 ```
