@@ -1,14 +1,29 @@
 ---
-title: PowerShell - break with nested loops 
+title: PowerShell - foreach-object and break 
 image: image
-description: break has a very different comportment whether you are in a for each or in a for loop. Let's understand why.
+description: There is a common misconception of the use and break and foreach-object.
 createddate: 01/06/2019
 updateddate: 17/06/2020
 tag: PowerShell
 author: Charles Boudry
 ---
 
-# PowerShell - break with pipeline
+# PowerShell - foreach-object and break
+
+I once reviewed a PowerShell code similar to this one :
+```powershell
+$is = 0..4
+$js = 0..4
+foreach($i in $is)
+{
+	$js | foreach-object{
+		$j = $_
+		write-output "$i $j"
+		if ($j -eq 5){break;}
+	}
+}
+```
+The usual expectation is the following : 
 
 ```powershell
 for ($i=0; $i -lt 10 ; $i++){
@@ -32,18 +47,7 @@ foreach($i in $is)
 ```
 
 
-```powershell
-$is = 0..9
-$js = 0..9
-foreach($i in $is)
-{
-	$js | foreach-object{
-		$j = $_
-		write-output "$i $j"
-		if ($j -eq 5){break;}
-	}
-}
-```
+
 
 
 ```powershell
