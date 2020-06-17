@@ -1,7 +1,7 @@
 ---
-title: PowerShell - foreach-object and break 
+title: PowerShell - break with ForEach-Object 
 image: image
-description: There is a common misconception of the use and break and foreach-object.
+description: There is a common misconception of break's use with the ForEach-Object Cmdlet.
 createddate: 01/06/2019
 updateddate: 17/06/2020
 tag: PowerShell
