@@ -24,67 +24,10 @@ foreach($i in $is)
 	}
 }
 ```
-The usual expectation is the following :
-```text
-0 0
-0 1
-0 2
-0 3
-1 0
-1 1
-1 2
-1 3
-2 0
-2 1
-2 2
-2 3
-3 0
-3 1
-3 2
-3 3
-```
-while the result was in fact : 
-```text
-0 0
-0 1
-0 2
-```
+| Customer's expectation  | The actual result |
+| ------------- | ------------- |
+| 0 0<br>0 1<br>0 2<br>0 3<br>1 0<br>1 1<br>1 2<br>1 3<br>2 0<br>2 1<br>2 2<br>2 3<br>3 0<br>3 1<br>3 2<br>3 3 | 0 0<br>0 1<br>0 2  |
+
+## Explanation
 
 
-```powershell
-for ($i=0; $i -lt 10 ; $i++){
-	for ($j=0; $j -lt 10 ; $j++){
-		write-output "$i $j"
-		if ($j -eq 5){break;}
-}}
-```
-
-```powershell
-$is = 0..9
-$js = 0..9
-foreach($i in $is)
-{
-	foreach($j in $js)
-	{
-		write-output "$i $j"
-		if ($j -eq 5){break;}
-	}
-}
-```
-
-
-
-
-
-```powershell
-$is = 0..9
-$js = 0..9
-$is | foreach-object{
-    $i = $_
-	$js | foreach-object{
-		$j = $_
-		write-output "$i $j"
-		if ($j -eq 5){break;}
-	}
-}
-```
