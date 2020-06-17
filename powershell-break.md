@@ -8,7 +8,7 @@ tag: PowerShell
 author: Charles Boudry
 ---
 
-# PowerShell - foreach-object and break
+# PowerShell - ForEach-Object and break
 
 ## Context
 I once reviewed a PowerShell code similar to this one :
