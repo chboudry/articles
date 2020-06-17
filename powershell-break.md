@@ -12,10 +12,10 @@ author: Charles Boudry
 
 I once reviewed a PowerShell code similar to this one :
 ```powershell
-$is = 0..4
+$is = 0..3
 foreach($i in $is)
 {
-	$js = 0..4
+	$js = 0..3
 	$js | %{
 		$j = $_
 		write-output "$i $j"
