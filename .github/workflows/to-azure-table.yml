@@ -22,7 +22,7 @@ jobs:
             
             Write-ActionDebug $result.Content
             
-            $test = get-content "$github.repository/powershell-break.md"
+            $test = get-content "$($github.repository)/powershell-break.md"
             echo $test
 
             # we have access to full context objects:
@@ -30,7 +30,7 @@ jobs:
               throw "something fishy's going on, repos don't match" # will cause step to fail
             }
             
-            Write-ActionDebug $github
+            Write-ActionDebug "$($github)"
             Write-ActionDebug $github.event.repository.full_name
             
             $someData = Get-MyCustomData
