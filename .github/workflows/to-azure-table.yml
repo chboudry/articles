@@ -17,13 +17,14 @@ jobs:
         uses: Amadevus/pwsh-script@v1.0.0
         with:
           script: |
-            Write-ActionDebug "This will be visible only when ACTIONS_STEP_DEBUG secret is set"
-            $result = Invoke-WebRequest "https://test3164645.azurewebsites.net/api/HttpTrigger1?name=testparworkflow"
+            #Write-ActionDebug "This will be visible only when ACTIONS_STEP_DEBUG secret is set"
+            #$result = Invoke-WebRequest "https://test3164645.azurewebsites.net/api/HttpTrigger1?name=testparworkflow"
             
-            Write-ActionDebug $result.Content
+            #Write-ActionDebug $result.Content
             
             $test = get-content "$($github.repository)/powershell-break.md"
-            echo $test
+            echo "hello"
+            echo "$test"
 
             # we have access to full context objects:
             if ($github.event.repository.full_name -ne $github.repository) {
