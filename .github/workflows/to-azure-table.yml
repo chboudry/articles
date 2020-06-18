@@ -23,7 +23,7 @@ jobs:
             Write-ActionDebug $result.Content
             
             $test = get-content './powershell-break.md'
-            Write-ActionDebug $test
+            echo $test
 
             # we have access to full context objects:
             if ($github.event.repository.full_name -ne $github.repository) {
