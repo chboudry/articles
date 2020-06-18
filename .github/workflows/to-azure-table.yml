@@ -16,7 +16,7 @@ jobs:
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
         with:
-          path: ./*
+          path: ${{ github.workspace }}/*
       - name: PowerShell script
         uses: Amadevus/pwsh-script@v1.0.0
         with:
