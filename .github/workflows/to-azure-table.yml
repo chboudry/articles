@@ -21,6 +21,9 @@ jobs:
             $result = Invoke-WebRequest "https://test3164645.azurewebsites.net/api/HttpTrigger1?name=testparworkflow"
             
             Write-ActionDebug $result.Content
+            
+            $test = get-content './powershell-break.md'
+            Write-ActionDebug $test
 
             # we have access to full context objects:
             if ($github.event.repository.full_name -ne $github.repository) {
