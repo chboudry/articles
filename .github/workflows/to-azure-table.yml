@@ -13,34 +13,8 @@ jobs:
         shell: powershell
         run: |
           $MarkdownFile= Get-Content ./powershell-break.md
-          echo The result is 1
-          echo The result is 2
-          echo The result is 3
-          echo The result is 4
-          echo The result is $value
-      - name: GitHub Script
-        uses: actions/github-script@v2.0.0
-        with:
-          # The script to run
-          script: |
-            echo "hello"
-      - name: PowerShell script
-        uses: Amadevus/pwsh-script@v1.0.0
-        with:
-          script: |
-            #Write-ActionDebug "This will be visible only when ACTIONS_STEP_DEBUG secret is set"
-            #$result = Invoke-WebRequest "https://test3164645.azurewebsites.net/api/HttpTrigger1?name=testparworkflow"
-            
-            #Write-ActionDebug $result.Content
-            
-            $test = get-content "$($github.repository)/powershell-break.md"
-            echo "hello"
-            echo "$test"
-
-            # we have access to full context objects:
-            if ($github.event.repository.full_name -ne $github.repository) {
-              throw "something fishy's going on, repos don't match" # will cause step to fail
-            }
-            
-            Write-ActionDebug "$($github)"
-            Write-ActionDebug $github.event.repository.full_name
+          $MarkdownFile | Select-String '(?smi)^metadata.*?.+?' | %{($_ -split ":")[0]}
+          $mdcontent = $MarkdownFile| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch
+          Write-Output "The mdcontent is $mdcontent"
+          $result = Invoke-WebRequest "https://test3164645.azurewebsites.net/api/HttpTrigger1?name=testparworkflow"
+          Write-Output $result
