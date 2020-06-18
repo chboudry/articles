@@ -26,7 +26,7 @@ foreach($i in $is)
 ```
 | Customer expectation  | The actual result |
 | ------------- | ------------- |
-| 0 0<br>0 1<br>0 2<br>0 3<br>1 0<br>1 1<br>1 2<br>1 3<br>2 0<br>2 1<br>2 2<br>2 3<br>3 0<br>3 1<br>3 2<br>3 3 | 0 0<br>0 1<br>0 2  |
+| 0 0<br>0 1<br>0 2<br>1 0<br>1 1<br>1 2<br>2 0<br>2 1<br>2 2<br>3 0<br>3 1<br>3 2 | 0 0<br>0 1<br>0 2  |
 
 We can observe that the `break` statement is not only breaking the `foreach-object` (written %) but the parent `foreach` as well.
 
