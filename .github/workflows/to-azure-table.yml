@@ -9,6 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: test
+        shell: bash
+        run: |
+          value=`cat ./powershell-break.md`
+          echo The result is 1
+          echo The result is 2
+          echo The result is 3
+          echo The result is 4
+          echo The result is $value
       - name: GitHub Script
         uses: actions/github-script@v2.0.0
         with:
