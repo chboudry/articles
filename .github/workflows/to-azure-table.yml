@@ -12,7 +12,7 @@ jobs:
       - name: test
         shell: powershell
         run: |
-          $value= gc ./powershell-break.md
+          $MarkdownFile= Get-Content ./powershell-break.md
           echo The result is 1
           echo The result is 2
           echo The result is 3
