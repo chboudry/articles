@@ -5,7 +5,7 @@ description: There is a common misconception of break's use with the ForEach-Obj
 createddate: 01/06/2019
 updateddate: 17/06/2020
 tag: PowerShell
-author: Charles Boudry
+author: chboudry
 ---
 
 # PowerShell - ForEach-Object and break
