@@ -6,13 +6,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - name: test
-        shell: bash
+        shell: powershell
         run: |
-          value=`cat ./powershell-break.md`
+          $value= gc ./powershell-break.md
           echo The result is 1
           echo The result is 2
           echo The result is 3
