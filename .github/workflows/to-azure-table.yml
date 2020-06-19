@@ -20,7 +20,7 @@ jobs:
             $articlecontent= Get-Content ./$($article.name)
             $hashtable =@{}
             $hashtable.Add("PartitionKey","post")
-            $hashtable.Add("RowKey",($($articles.name)).substring(0,($($articles.name)).length-3))
+            $hashtable.Add("RowKey",($($article.name)).substring(0,($($article.name)).length-3))
             $articlecontent | Select-String '(?smi)^metadata.*?.+?' | %{$hashtable.Add(($_ -split ":")[0].substring(9),(($_ -split ":")[1]).substring(1))}
             $mdcontent = $articlecontent| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch | Out-string
             $hashtable.Add("mdcontent",$mdcontent)
