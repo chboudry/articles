@@ -9,15 +9,15 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: test
+      - name: powershell script
         shell: powershell
         env:
            AzureTableUri: ${{ secrets.AZURE_TABLE_URI }}
         run: |
           $MarkdownFile= Get-Content ./powershell-break.md
           $hashtable =@{}
-          $hashtable.Add("partitionkey","post")
-          $hashtable.Add("rowkey","powershell-break")
+          $hashtable.Add("PartitionKey","post")
+          $hashtable.Add("RowKey","powershell-break")
           $MarkdownFile | Select-String '(?smi)^metadata.*?.+?' | %{$hashtable.Add(($_ -split ":")[0],(($_ -split ":")[1]).substring(1))}
           $mdcontent = $MarkdownFile| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch | Out-string
           $hashtable.Add("mdcontent",$mdcontent)
