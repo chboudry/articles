@@ -1,11 +1,11 @@
 ---
-title: Azure Disk - Benchmark
-image: automation
-description: Describes the different methods for starting a runbook in Azure Automation from another runbook and sharing information between them.
-createddate: 01/17/2019
-updateddate: 01/17/2019
-tag: Azure
-author: Charles Boudry
+metadata-title: Azure Disk - Benchmark
+metadata-image: automation
+metadata-description: Describes the different methods for starting a runbook in Azure Automation from another runbook and sharing information between them.
+metadata-createddate: 01/17/2019
+metadata-updateddate: 01/17/2019
+metadata-tag: Azure
+metadata-author: Charles Boudry
 ---
 
 # Azure Disk - Benchmark
