@@ -1,11 +1,11 @@
 ---
-title: PowerShell - break with ForEach-Object 
-image: image
-description: There is a common misconception of break's use with the ForEach-Object Cmdlet.
-createddate: 01/06/2019
-updateddate: 17/06/2020
-tag: PowerShell
-author: Chboudry
+metadata-title: PowerShell - break with ForEach-Object 
+metadata-image: image
+metadata-description: There is a common misconception of break's use with the ForEach-Object Cmdlet.
+metadata-createddate: 01/06/2019
+metadata-updateddate: 17/06/2020
+metadata-tag: PowerShell
+metadata-author: Charles Boudry
 ---
 
 # PowerShell - ForEach-Object and break
