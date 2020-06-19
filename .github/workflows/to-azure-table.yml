@@ -25,7 +25,9 @@ jobs:
             $mdcontent = $articlecontent| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch | Out-string
             $hashtable.Add("mdcontent",$mdcontent)
             $body = $hashtable | convertto-Json
-
+            
+            $body
+            
             $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
             $headers.Add("Content-Type", "application/json")
             $headers.Add("Accept", "application/json;odata=fullmetadata")
