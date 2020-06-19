@@ -32,6 +32,6 @@ jobs:
             $headers.Add("Content-Type", "application/json")
             $headers.Add("Accept", "application/json;odata=fullmetadata")
 
-            $response = Invoke-WebRequest "$env:AzureTableUri" -Headers $headers -Body $Body -Method 'POST'
+            $response = Invoke-WebRequest "$env:AzureTableUri" -Headers $headers -Body $Body -Method 'PUT'
             $response.rawcontent
           }
