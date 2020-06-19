@@ -15,7 +15,7 @@ jobs:
            AzureTableUri: ${{ secrets.AZURE_TABLE_URI }}
         run: |
           $articles = get-childitem -Filter *.md
-          foreach $article in $articles
+          foreach($article in $articles)
           { 
             $articlecontent= Get-Content ./$($article.name)
             $hashtable =@{}
