@@ -15,28 +15,15 @@ jobs:
            AzureTableUri: ${{ secrets.AZURE_TABLE_URI }}
         run: |
           $MarkdownFile= Get-Content ./powershell-break.md
-          $MarkdownFile | Select-String '(?smi)^metadata.*?.+?' | %{($_ -split ":")[0]}
+          $hashtable =@{}
+          $MarkdownFile | Select-String '(?smi)^metadata.*?.+?' | %{$hashtable.Add(($_ -split ":")[0],(($_ -split ":")[1]).substring(1))}
           $mdcontent = $MarkdownFile| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch
-          Write-Output "The mdcontent is $mdcontent"
+          $hashtable.Add("mdcontent",$mdcontent)
+          $body = $hashtable | convertto-Json
           
           $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
           $headers.Add("Content-Type", "application/json")
           $headers.Add("Accept", "application/json;odata=fullmetadata")
-
-          $body = @{
-          "PartitionKey"="post"  
-          "RowKey"="slugname"  
-          "title"="nom long du post"  
-          "description"="description"
-          "dreateddate"="2008-07-10"  
-          "updateddate"="2020-07-10"  
-          "tag"="Azure"
-          "author"="2020-07-10"
-          "mdcontent"="md"
-          } | convertto-Json
-
-          $result = Invoke-WebRequest "https://test3164645.azurewebsites.net/api/HttpTrigger1?name=testparworkflow"
-          Write-Output $result
           
           $response = Invoke-WebRequest "$env:AzureTableUri" -Headers $headers -Body $Body -Method 'POST'
           $response.rawcontent
