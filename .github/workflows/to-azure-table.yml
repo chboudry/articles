@@ -14,18 +14,22 @@ jobs:
         env:
            AzureTableUri: ${{ secrets.AZURE_TABLE_URI }}
         run: |
-          $MarkdownFile= Get-Content ./powershell-break.md
-          $hashtable =@{}
-          $hashtable.Add("PartitionKey","post")
-          $hashtable.Add("RowKey","powershell-break")
-          $MarkdownFile | Select-String '(?smi)^metadata.*?.+?' | %{$hashtable.Add(($_ -split ":")[0].substring(9),(($_ -split ":")[1]).substring(1))}
-          $mdcontent = $MarkdownFile| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch | Out-string
-          $hashtable.Add("mdcontent",$mdcontent)
-          $body = $hashtable | convertto-Json
-          
-          $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
-          $headers.Add("Content-Type", "application/json")
-          $headers.Add("Accept", "application/json;odata=fullmetadata")
-          
-          $response = Invoke-WebRequest "$env:AzureTableUri" -Headers $headers -Body $Body -Method 'POST'
-          $response.rawcontent
+          $articles = get-childitem -Filter *.md
+          foreach $article in $articles
+          { 
+            $articlecontent= Get-Content ./$($article.name)
+            $hashtable =@{}
+            $hashtable.Add("PartitionKey","post")
+            $hashtable.Add("RowKey",($($articles.name)).substring(0,($($articles.name)).length-3))
+            $articlecontent | Select-String '(?smi)^metadata.*?.+?' | %{$hashtable.Add(($_ -split ":")[0].substring(9),(($_ -split ":")[1]).substring(1))}
+            $mdcontent = $articlecontent| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch | Out-string
+            $hashtable.Add("mdcontent",$mdcontent)
+            $body = $hashtable | convertto-Json
+
+            $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
+            $headers.Add("Content-Type", "application/json")
+            $headers.Add("Accept", "application/json;odata=fullmetadata")
+
+            $response = Invoke-WebRequest "$env:AzureTableUri" -Headers $headers -Body $Body -Method 'POST'
+            $response.rawcontent
+          }
