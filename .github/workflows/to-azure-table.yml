@@ -16,8 +16,10 @@ jobs:
         run: |
           $MarkdownFile= Get-Content ./powershell-break.md
           $hashtable =@{}
+          $hashtable.Add("partitionkey","post")
+          $hashtable.Add("rowkey","powershell-break")
           $MarkdownFile | Select-String '(?smi)^metadata.*?.+?' | %{$hashtable.Add(($_ -split ":")[0],(($_ -split ":")[1]).substring(1))}
-          $mdcontent = $MarkdownFile| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch
+          $mdcontent = $MarkdownFile| Select-String '(?smi)^metadata.*?.+?' -notmatch | select-string '(?smi)^---' -notmatch | Out-string
           $hashtable.Add("mdcontent",$mdcontent)
           $body = $hashtable | convertto-Json
           
