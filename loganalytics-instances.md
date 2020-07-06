@@ -26,5 +26,9 @@ Of course you can apply the 1 workspace per environment rule.
 
 ## Others acceptable exceptions
 
-   - My ressources span across multiple Azure regions : you may want to consider to put a workspace in the same region to avoid trafic cost.
+   - My ressources span across multiple Azure regions : you may want to consider to put a workspace in the same region to avoid trafic cost. That's what [Microsoft documentation] recommends for VMs.
    - I want to implement segregation of access for multiple teams working on multiple Azure ressources of the same type : Log analytics does not provide row level access so you will need to have multiple workspace to work around that. 
+   - You want to split billing between multiple team : multiple workspace is the easiest way to go.
+
+
+[Microsoft documentation]:https://docs.microsoft.com/en-gb/azure/cloud-adoption-framework/manage/azure-server-management/prerequisites
