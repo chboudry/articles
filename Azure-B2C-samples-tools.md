@@ -40,8 +40,13 @@ Visual Studio Code link : https://code.visualstudio.com/
 B2C extension : https://github.com/azure-ad-b2c/vscode-extension 
 
 What you can do with it : 
-- First it is really convenient to review an existing policy by using the Azure AD B2C Policy Explorer on the left bar, it allow us to navigate easily within it and to have an overview of the policy 
 
+Feature | Screenshot
+------------ | -------------
+First it is really convenient to review an existing policy by using the Azure AD B2C Policy Explorer on the left bar, it allow us to navigate easily within it and to have an overview of the policy  | ![Visual Studio Code Policy Explorer](media/b2c/B2Ccodepolicyexplorer.png)
+Then to add your own piece of code you can leverage the Ctrl+Shift+P shortcut of Visual Studio Code to access the command pane and then write "b2c" to get all the useful shortcuts for b2c | ![Visual Studio Code palette](https://github.com/chboudry/Articles/blob/master/media/b2c/B2Ccodepalette.png)
+You obviously will have autocomplete when writing new stuff | ![Visual Studio Code Auto Complete](media/b2c/B2Ccodeautocomplete.png)
+You can drag your mouse over the main Xml node to access to help easily | ![Visual Studio Code Help](media/b2c/B2Ccodehelp.png)
  
 ### Upload
 
