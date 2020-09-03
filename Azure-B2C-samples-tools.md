@@ -43,16 +43,23 @@ B2C extension : https://github.com/azure-ad-b2c/vscode-extension
 
 What you can do with it : 
 
-Feature | Screenshot
+Features | Screenshots
 ------------ | -------------
 First it is really convenient to review an existing policy by using the Azure AD B2C Policy Explorer on the left bar, it allow us to navigate easily within it and to have an overview of the policy  | ![Visual Studio Code Policy Explorer](media/b2c/B2Ccodepolicyexplorer.png)
 Then to add your own piece of code you can leverage the Ctrl+Shift+P shortcut of Visual Studio Code to access the command pane and then write "b2c" to get all the useful shortcuts for b2c | ![Visual Studio Code palette](https://github.com/chboudry/Articles/blob/master/media/b2c/B2Ccodepalette.png)
 You obviously will have autocomplete when writing new stuff | ![Visual Studio Code Auto Complete](media/b2c/B2Ccodeautocomplete.png)
 You can drag your mouse over the main Xml node to access to help easily | ![Visual Studio Code Help](media/b2c/B2Ccodehelp.png)
+If you are still not convince, let me introduce you to the best feature possible which is the ability to manage multiple environments. <br><br>What you need to do is the following : <br> - Execute B2C policy build a first time, it will ask you to create an appsettings.json, say yes. <br> - Edit this appsettings to make it match your environments. You may remove some if you want to. <br> - In your policy files, replace your name and tenant by {settings:Tenant} or similar. <br> - Execute B2C policy build again to generate policy files for all your environments in one go<br><br>How cool is that ! |  ![Visual Studio Code settings](media/b2c/B2Ccodesettings.png)<br>![Visual Studio Code Environments result](media/b2c/B2Ccodebuildresult.png)
+
+There are even more features such as smart copy paste and get B2C application IDs that I did not speak about. 
+
+You can find additionnal information in the main documentation : https://github.com/azure-ad-b2c/vscode-extension
  
 ### Upload
 
-To upload policies in Azure wih Custom policy manager :  https://github.com/azure-ad-b2c/custom-policy-manager 
+Once you have authored your policy, I'm guessing you will upload in Azure, and unless you like to struggle with uploading within the Azure Portal, here are better alternatives for you : 
+  - the Custom policy manager tool :  https://github.com/azure-ad-b2c/custom-policy-manager 
+  - ...or Visual Studio Code extension :) 
 
 ### Troubleshoot 
 
