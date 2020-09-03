@@ -12,7 +12,9 @@ metadata-author: Charles Boudry
 
 ## Context
 
-For someone who wants to learn about custom policies in B2C, first step should be to read Microsoft documentation and tutorials with the starter pack : 
+For someone who wants to learn about custom policies in B2C, first step should definitely be to read Microsoft documentation and tutorials.
+
+Microsoft tutorial getting started :
 https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-get-started 
 
 Starter pack direct link : 
