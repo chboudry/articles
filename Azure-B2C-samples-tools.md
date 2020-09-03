@@ -59,7 +59,7 @@ You can find additionnal information in the main documentation : https://github.
 
 Once you have authored your policy, I'm guessing you will upload in Azure, and unless you like to struggle with uploading within the Azure Portal, here are better alternatives for you : 
   - the Custom policy manager tool :  https://github.com/azure-ad-b2c/custom-policy-manager 
-  - or Visual Studio Code extension again
+  - Visual Studio Code extension again
   
  For both of them you will need to register an application with delegated permissions and to have a global admin account within the B2C directory.
  
