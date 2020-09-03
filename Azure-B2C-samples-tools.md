@@ -66,16 +66,18 @@ Once you have authored your policy, I'm guessing you will upload in Azure, and u
  The custom policy manager tool is a bit more complex to install as you also need Visual Studio as a prerequisite to compile the project and one more application registration to do. That said I have a preference for this tool so let me first by showing you how Visual Code works :
  
  Once you've done the installation describe here you will have 2 possible actions to upload your policies :
+ 
 ![Visual Studio Code upload](media/b2c/B2Ccodeupload.png) 
 
 Then you can see the result in a Visual Code Notification :
+
 ![Visual Studio Code upload result](media/b2c/B2CCodenotification.png) 
 
 Now I've made an issue in my file on purpose and you see the actual error message is truncated because it's too long.
 
 Also, I can upload but I have no overview of what is already on Azure.
 
-Because of this 2 reasons, I tend to prefer the custom policy manager tool that do not have these issues :
+Because of these two issues, I tend to prefer the custom policy manager tool :
 ![custom policy manager tool](media/b2c/B2Ccustompolicymanager.png) 
 
 ### Troubleshoot 
