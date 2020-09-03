@@ -59,7 +59,24 @@ You can find additionnal information in the main documentation : https://github.
 
 Once you have authored your policy, I'm guessing you will upload in Azure, and unless you like to struggle with uploading within the Azure Portal, here are better alternatives for you : 
   - the Custom policy manager tool :  https://github.com/azure-ad-b2c/custom-policy-manager 
-  - ...or Visual Studio Code extension :) 
+  - or Visual Studio Code extension again
+  
+ For both of them you will need to register an application with delegated permissions and to have a global admin account within the B2C directory.
+ 
+ The custom policy manager tool is a bit more complex to install as you also need Visual Studio as a prerequisite to compile the project and one more application registration to do. That said I have a preference for this tool so let me first by showing you how Visual Code works :
+ 
+ Once you've done the installation describe here you will have 2 possible actions to upload your policies :
+![Visual Studio Code upload](media/b2c/B2Ccodeupload.png) 
+
+Then you can see the result in a Visual Code Notification :
+![Visual Studio Code upload result](media/b2c/B2CCodenotification.png) 
+
+Now I've made an issue in my file on purpose and you see the actual error message is truncated because it's too long.
+
+Also, I can upload but I have no overview of what is already on Azure.
+
+Because of this 2 reasons, I tend to prefer the custom policy manager tool that do not have these issues :
+![custom policy manager tool](media/b2c/B2Ccustompolicymanager.png) 
 
 ### Troubleshoot 
 
