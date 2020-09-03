@@ -34,9 +34,11 @@ https://github.com/azure-ad-b2c/samples
 ### Author
 
 Unless XML is your second language, you have to use Visual Studio Code and add the Azure AD B2C extension, it will change your life.
+
 Visual Studio Code is free and cross-platform, and so is the extension, so you have no excuses.
 
 Visual Studio Code link : https://code.visualstudio.com/
+
 B2C extension : https://github.com/azure-ad-b2c/vscode-extension 
 
 What you can do with it : 
