@@ -17,7 +17,9 @@ You may find those tools useful to help your B2C pipeline and troubleshooting st
 -	To upload policies in Azure wih Custom policy manager :  https://github.com/azure-ad-b2c/custom-policy-manager 
 -	Collecting Log with Application Insights : https://docs.microsoft.com/en-gb/azure/active-directory-b2c/troubleshoot-with-application-insights 
 -	To read logs, you may use :
-o	Applications insights log panel : https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-platform-logs 
-o	User Journey Recorder : https://github.com/Azure-Samples/active-directory-b2c-advanced-policies/tree/master/UserJourneyRecorder
-o	VS Code extension can be used as well for that
--	To decode token : https://jwt.io/ 
+  - Applications insights log panel : https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-platform-logs 
+  -	User Journey Recorder : https://github.com/Azure-Samples/active-directory-b2c-advanced-policies/tree/master/UserJourneyRecorder
+  -	VS Code extension can be used as well for that
+-	To decode token : 
+  - https://jwt.io/ 
+  - https://jwt.ms/
