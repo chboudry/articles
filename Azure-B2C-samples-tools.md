@@ -14,10 +14,10 @@ metadata-author: Charles Boudry
 
 For someone who wants to learn about custom policies in B2C, first step should definitely be to read Microsoft documentation and tutorials.
 
-Microsoft tutorial getting started :
+Microsoft tutorial getting started : 
 https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-get-started 
 
-Starter pack direct link : 
+Starter pack direct link :  
 https://github.com/Azure-Samples/active-directory-b2c-custom-policy-starterpack 
 
 That said, even after that, there is still a bit challenge to master B2C. 
@@ -26,16 +26,30 @@ This article intends to help you as best as possible by providing usefull sample
 
 ## Samples
 
+Microsoft Samples : 
 https://github.com/azure-ad-b2c/samples
-
-https://github.com/Azure-Samples/active-directory-b2c-advanced-policies
 
 ## Tools
 
-You may find those tools useful to help your B2C pipeline and troubleshooting steps
-- To author custom policies, you may use an Azure AD B2C extension for Visual Code :  https://github.com/azure-ad-b2c/vscode-extension 
-- To upload policies in Azure wih Custom policy manager :  https://github.com/azure-ad-b2c/custom-policy-manager 
-- Collecting Log with Application Insights : https://docs.microsoft.com/en-gb/azure/active-directory-b2c/troubleshoot-with-application-insights 
+### Author
+
+Unless XML is your second language, you have to use Visual Studio Code and add the Azure AD B2C extension, it will change your life.
+Visual Studio Code is free and cross-platform, and so is the extension, so you have no excuses.
+
+Visual Studio Code link : https://code.visualstudio.com/
+B2C extension : https://github.com/azure-ad-b2c/vscode-extension 
+
+What you can do with it : 
+- First it is really convenient to review an existing policy by using the Azure AD B2C Policy Explorer on the left bar, it allow us to navigate easily within it and to have an overview of the policy 
+
+ 
+### Upload
+
+To upload policies in Azure wih Custom policy manager :  https://github.com/azure-ad-b2c/custom-policy-manager 
+
+### Troubleshoot 
+
+Collecting Log with Application Insights : https://docs.microsoft.com/en-gb/azure/active-directory-b2c/troubleshoot-with-application-insights 
 - To read logs, you may use : 
   - Applications insights log panel : https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-platform-logs 
   - User Journey Recorder : https://github.com/Azure-Samples/active-directory-b2c-advanced-policies/tree/master/UserJourneyRecorder
@@ -43,3 +57,4 @@ You may find those tools useful to help your B2C pipeline and troubleshooting st
 - To decode token : 
   - https://jwt.io/ 
   - https://jwt.ms/
+
