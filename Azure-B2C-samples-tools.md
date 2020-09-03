@@ -1,7 +1,7 @@
 ---
 metadata-title: Azure B2C - Samples & Tools for custom policies 
 metadata-image: image
-metadata-description: Sharing all the tool that can be useful to work on Azure AD B2C.
+metadata-description: Sharing all the samples and tools that can be useful to work on Azure AD B2C.
 metadata-createddate: 02/09/2020
 metadata-updateddate: 02/09/2020
 metadata-tag: B2C
