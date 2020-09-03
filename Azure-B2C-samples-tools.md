@@ -20,7 +20,7 @@ https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-get-st
 Starter pack direct link :  
 https://github.com/Azure-Samples/active-directory-b2c-custom-policy-starterpack 
 
-That said, even after that, there is still a bit challenge to master B2C. 
+That said, even after that, there is still a bit of a challenge to master B2C. 
 
 This article intends to help you as best as possible by providing usefull samples and tools.
 
