@@ -94,7 +94,7 @@ What's also really convenient is they do sort out a little bit the user journey,
 ![Visual Studio Code code logs](media/b2c/B2CCodeLogs.png) 
 
 Application Insights logs table has some other interesting features though, because you can leverage a query language.
-If you wish to use it to see everything, just use "traces | order by timestamp desc" because otherwise the data won't be sort like in the screenshot.
+If you wish to use it to see everything, just use "traces | order by timestamp desc" because otherwise the data won't be sort like you can see in the screenshot.
 
 ![Application Insights logs](media/b2c/B2CAILogs.png) 
 
