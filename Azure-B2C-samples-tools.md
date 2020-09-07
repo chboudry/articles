@@ -82,12 +82,28 @@ Because of these two issues, I tend to prefer the custom policy manager tool :
 
 ### Troubleshoot 
 
-Collecting Log with Application Insights : https://docs.microsoft.com/en-gb/azure/active-directory-b2c/troubleshoot-with-application-insights 
-- To read logs, you may use : 
-  - Applications insights log panel : https://docs.microsoft.com/en-us/azure/azure-monitor/platform/data-platform-logs 
-  - User Journey Recorder : https://github.com/Azure-Samples/active-directory-b2c-advanced-policies/tree/master/UserJourneyRecorder
-  - VS Code extension can be used as well for that
-- To decode token : 
+Your first step should obviously be to enable Application Insights for B2C. How to do that is explained quite well in the documentation : https://docs.microsoft.com/en-gb/azure/active-directory-b2c/troubleshoot-with-application-insights 
+
+To read the log, you may use :
+  - Applications insights
+  - Visual Studio Code extension
+  
+The Visual Studio Code extension is confortable as you can edit & troubleshoot from a single tool.
+What's also really convenient is they do sort out a little bit the user journey, you can see below one sign in and one sign in :
+
+![Visual Studio Code code logs](media/b2c/B2CCodeLogs.png) 
+
+Application Insights logs table has some other interesting features though, because you can leverage a query language.
+
+![Application Insights logs](media/b2c/B2CAILogs.png) 
+
+I would use both.
+
+### Miscellaneous
+
+[UserJourneyRecorderWebApp](https://github.com/Azure-Samples/active-directory-b2c-advanced-policies/tree/master/UserJourneyRecorder) is another tool to troubleshoot the Application Insight logs but because it has not been updated for 3 years and is quite complex to install, I choose not to advertise it.
+
+To decode token : 
   - https://jwt.io/ 
   - https://jwt.ms/
 
