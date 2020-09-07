@@ -94,10 +94,9 @@ What's also really convenient is they do sort out a little bit the user journey,
 ![Visual Studio Code code logs](media/b2c/B2CCodeLogs.png) 
 
 Application Insights logs table has some other interesting features though, because you can leverage a query language.
+If you wish to use it to see everything, just use "traces | order by timestamp desc" because otherwise the data won't be sort like in the screenshot.
 
 ![Application Insights logs](media/b2c/B2CAILogs.png) 
-
-I would use both.
 
 ### Miscellaneous
 
@@ -106,4 +105,6 @@ I would use both.
 To decode token : 
   - https://jwt.io/ 
   - https://jwt.ms/
+  - https://www.authr.biz/
+
 
