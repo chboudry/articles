@@ -31,8 +31,8 @@ For more pin point Microsoft recommendations on Azure Services, go to https://gi
 	- Governance
 		- Azure Tenant
 		- Azure Resource Naming Convention
-		- Subscriptions
 		- Management Groups
+		- Subscriptions
 		- Resource Groups
 		- Azure Policies
 		- Locks
