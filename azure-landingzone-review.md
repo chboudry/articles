@@ -63,10 +63,11 @@ For more pin point Microsoft recommendations on Azure Services, go to https://gi
 		- DDOS
 		- DNS
 	- Deployment
-		- Infrastructure
-		- Application
+		- Infrastructure as code
+		- Application - Devops
+		- Machine learning - Mlops
 	- Security misc
-		- Microsoft Defender For Cloud ( Azure Security Center)
+		- Microsoft Defender For Cloud ( Azure Security Center) basic + standard
 		- SIEM - Azure Sentinel
 	- Compute
 		- Virtual Machines
