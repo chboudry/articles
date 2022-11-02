@@ -1,10 +1,10 @@
 ---
 metadata-title: Azure Landing Zone review 
-metadata-image: image
+metadata-image: 
 metadata-description: This is a cheatsheet checkpoints list to review Azure Landing Zone review.
 metadata-createddate: 02/11/2022
 metadata-updateddate: 02/11/2022
-metadata-tag: PowerShell
+metadata-tag: architecture
 metadata-author: Charles Boudry
 ---
 
