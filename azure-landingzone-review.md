@@ -39,6 +39,8 @@ For more pin point Microsoft recommendations on Azure Services, go to https://gi
 		- Azure Blueprint
 		- Azure Tags
 	- Identity
+		- AD + ADFS + AAD Connect
+		- AADDS
 		- RACI + Role Based Access Control
 		- Multi Factor Authentication
 		- Block Legacy Authentication
