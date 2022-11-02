@@ -19,85 +19,76 @@ For more pin point Microsoft recommendations on Azure Services, go to https://gi
 
 ## The list 
 
+- Requirements
+	- Business Requirement
+	- Technical Requirements
+	- Assumptions
+- Solution Overview
+	- Project Name Platform.
+	- High Level Design
+	- Overview
+- Design Description
+	- Governance
+		- Azure Tenant
+		- Azure Resource Naming Convention
+		- Subscriptions
+		- Management Groups
+		- Resource Groups
+		- Azure Policies
+		- Locks
+		- Azure Blueprint
+		- Azure Tags
+	- Identity
+		- RACI + Role Based Access Control
+		- Multi Factor Authentication
+		- Block Legacy Authentication
+		- Security Defaults
+		- Privileged Identity Management (PIM)
+	- Networking
+		- Topology
+		- Address Spaces / On-premises IP range(s)
+		- Virtual Network
+		- Virtual Network Peering.
+		- Azure Route Tables (User Defined Routes)
+		- Azure Private Endpoint
+		- Virtual Network Gateway
+		- Express Route
+		- Load Balancer
+		- Network Security Groups
+		- Azure Firewall
+		- Application Gateway
+		- Traffic Manager
+		- Network Virtual Appliances
+		- Azure Virtual WAN
+		- DDOS
+		- DNS
+	- Deployment
+		- Infrastructure
+		- Application
+	- Security misc
+		- Microsoft Defender For Cloud ( Azure Security Center)
+		- SIEM - Azure Sentinel
+	- Compute
+		- Virtual Machines
+		- Virtual Machine Scale Sets
+		- Availability Sets.
+		- Availability Zones
+		- Hard Disk Storage
+		- AKS
+		- Compute Licensing
+		- Pay as You Go
+		- Hybrid Use Benefit
+		- Reserved Instances
+		- Bring Your Own License – Network Virtual Appliances
+	- PaaS
+		- Storage Accounts
+		- Web Apps
+		- App Service Plan
+	- SQL
+		- SQL on Azure Virtual Machines
+		- Azure SQL Database
+		- Azure SQL Database Managed Instance
+	- Serverless
+		- Functions
+		- Event Grid
 
- Requirements
-		 Business Requirements
-		Technical Requirements
-		Assumptions
-    Solution Overview
-		Project Name Platform.
-		High Level Design
-		Overview
-    Design Description
-       Governance
-		Azure Tenant
-		Azure Resource Naming Convention
-		Subscriptions
-		Management Groups
-		Resource Groups
-		Azure Policies
-		 Locks
-		Azure Blueprint
-		Azure Tags
-       Networking
-		Agreeing with hub & spoke topology
-		On-premises IP range(s)
-		Virtual Network
-		Virtual Network Peering.
-		Azure Route Tables (User Defined Routes)
-		Azure Private Endpoint
-		Virtual Network Gateway
-		Express Route
-		Load Balancer
-		Network Security Groups
-		Azure Firewall
-		Application Gateway
-		Traffic Manager
-		Network Virtual Appliances
-		Azure Virtual WAN
-		DDOS
-		DNS
-       Operational
-		Bastion 
-		Backup
-		Disaster Recovery
-		Update Management
-		Automation
-		Monitoring
-		Anti-Virus 
-		Cost Management
-		Azure Arc
-       Security
-		RACI + Role Based Access Control
-		Microsoft Defender For Cloud ( Azure Security Center)
-		SIEM - Azure Sentinel
-		Multi Factor Authentication
-		Block Legacy Authentication
-		Security Defaults
-		Privileged Identity Management (PIM)
-        Compute
-		Virtual Machines
-		Virtual Machine Scale Sets
-		Availability Sets.
-		Availability Zones
-		Hard Disk Storage
-		AKS
-		Compute Licensing
-		Pay as You Go
-		Hybrid Use Benefit
-		Reserved Instances
-		Bring Your Own License – Network Virtual Appliances
-       PaaS
-		Storage Accounts
-		Web Apps
-		App Service Plan
-       SQL
-		SQL on Azure Virtual Machines
-		Azure SQL Database
-		Azure SQL Database Managed Instance
-       Serverless
-		Functions
-		Event Grid
-       Deployment
-		Infrastructure
-    Application
