@@ -10,8 +10,8 @@ But for a convenient one page guide, this is below :
 6. Download Github Cli https://github.com/cli/cli/releases
 7. Fill in and run the following Powershell script
 ```
-$repo = "your forked repo"
-$env = "githubenv"
+$repo = "your forked repo";
+$env = "githubenv";
 $Secrets = @{
 TRE_ID = "";
 AAD_TENANT_ID ="";
