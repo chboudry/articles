@@ -8,7 +8,7 @@ But for a convenient one page guide, this is below :
 4. Run az login & az account set --name "SUBSCRIPTIONNAME" & make auth
 5. ON Azure Portal/AAD/Enterprise Application, add yourself as administrator to the "TREID API" app.
 6. Create a service principal for github :  az ad sp create-for-rbac --name "RandomAppName" --role owner --scopes /subscriptions/SUBSCRIPTIONID --sdk-auth
-7. On Github, create a environment variable named "AZURE_CREDENTIALS" 
+7. On Github, create a environment variable named "AZURE_CREDENTIALS" and as value, fill in the result of the previous commands, brackets included
 8. Execute
 ```
 gh auth login
