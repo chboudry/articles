@@ -24,9 +24,9 @@ done
 ```
 
 Note  : Current missmatch
-  a. TEST_APP_ID
-  b. TEST_WORKSPACE_APP_ID is api_client_id
-  c. TEST_WORKSPACE_APP_SECRET is api_client_id
+- TEST_APP_ID is test_account_client_id
+- TEST_WORKSPACE_APP_ID is api_client_id
+- TEST_WORKSPACE_APP_SECRET is api_client_id
 
 9. Consider removing the cron schedule from the deploy_tre.yml (this is more for dev purposes and a user should only redeploy for a new release)
 10. Run Github Action "Deploy Azure TRE"
