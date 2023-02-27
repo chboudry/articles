@@ -16,10 +16,10 @@ repo="name/AzureTRE-Deployment"
 env="CICD"
 ghvar=$(cat ./config.yaml | grep ":" | grep -v -e '#' | grep -v -e ':$' | sed 's/ //g')
 for fn in $ghvar; 
-	do 
-		parameter=$(echo $fn |cut -d ":" -f 1)
-		value=$(echo $fn |cut -d ":" -f 2)
-		gh secret set $parameter -b $value --repo $repo  --env $env
+do 
+	parameter=$(echo $fn |cut -d ":" -f 1)
+	value=$(echo $fn |cut -d ":" -f 2)
+	gh secret set $parameter -b $value --repo $repo  --env $env
 done
 ```
 
@@ -30,5 +30,8 @@ Note  : Current missmatch
 
 9. Consider removing the cron schedule from the deploy_tre.yml (this is more for dev purposes and a user should only redeploy for a new release)
 10. Run Github Action "Deploy Azure TRE"
+
+Note : you may have to rerun : had an issue to login to ACR first time.
+
 11. Setup is complete. 
 12. Connect to https://TREID.LOCATION.cloudapp.azure.com/ to manage your Azure TRE
